@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+   xmlns="http://www.springframework.org/schema/beans"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation=
+   "http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   <!-- controller -->
+   <bean id='hello_controller' class='bean.HelloController'/>
+   
+   <!-- view Resolver(결과페이지 정의)-->
+   <bean id='view_resolver' 
+   class='org.springframework.web.servlet.view.InternalResourceViewResolver'>
+      <property name='prefix' value='./begin/'/> <!-- 'index.jsp?inc=./begin/'도 가능 -->
+      <property name='suffix' value='.jsp'/>
+   </bean>
+   
+</beans>

@@ -1,0 +1,18 @@
+package bean;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+public class HelloController {
+   
+   @RequestMapping(value="/hello.jhta")
+   public ModelAndView hello(String name) {
+      ModelAndView mv = new ModelAndView();
+      String msg = "heollo," + name;
+      mv.addObject("msg", msg);
+      mv.setViewName("hello");
+      return mv;
+   }
+}
